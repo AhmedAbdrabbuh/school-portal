@@ -12,6 +12,22 @@ class PortalTests(TestCase):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
 
+    def test_about_page_status_code(self):
+        response = self.client.get(reverse('about'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_mission_page_status_code(self):
+        response = self.client.get(reverse('mission'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_donate_page_status_code(self):
+        response = self.client.get(reverse('donate'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_contact_page_status_code(self):
+        response = self.client.get(reverse('contact'))
+        self.assertEqual(response.status_code, 200)
+
     def test_payment_portal_redirects_unauthenticated(self):
         response = self.client.get(reverse('payment'))
         self.assertEqual(response.status_code, 302)

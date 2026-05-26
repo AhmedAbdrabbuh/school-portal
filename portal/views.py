@@ -9,6 +9,18 @@ from decimal import Decimal, InvalidOperation
 def home(request):
     return render(request, 'portal/home.html')
 
+def about(request):
+    return render(request, 'portal/about.html')
+
+def mission(request):
+    return render(request, 'portal/mission.html')
+
+def donate(request):
+    return render(request, 'portal/donate.html')
+
+def contact(request):
+    return render(request, 'portal/contact.html')
+
 @login_required
 def payment_portal(request):
     if request.method == 'POST':

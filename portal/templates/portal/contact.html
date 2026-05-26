@@ -1,0 +1,81 @@
+{% extends 'portal/base.html' %}
+
+{% block content %}
+<div class="row mb-5 py-4">
+    <div class="col-12 text-center mb-4">
+        <h2 class="display-5 fw-bold text-dark"><i class="bi bi-envelope-paper me-2 text-primary"></i>Get in Touch</h2>
+        <p class="lead text-muted">Have a question or need assistance? We're here to help.</p>
+    </div>
+</div>
+
+<div class="row g-5">
+    <div class="col-md-5">
+        <div class="card bg-primary text-white h-100 shadow border-0 rounded-4">
+            <div class="card-body p-5">
+                <h3 class="fw-bold mb-4">Contact Information</h3>
+                <p class="mb-4 text-white-50">Fill out the form and our team will get back to you within 24 hours.</p>
+
+                <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-telephone fs-3 me-3 text-info"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Phone</h5>
+                        <p class="mb-0">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-envelope fs-3 me-3 text-info"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Email</h5>
+                        <p class="mb-0">support@eduportal.demo</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-3 me-3 text-info"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Location</h5>
+                        <p class="mb-0">123 Education Lane<br>Learning City, ST 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+            <div class="card-body p-5">
+                <form action="#" method="post">
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label fw-bold">First Name</label>
+                            <input type="text" class="form-control bg-light" id="firstName" placeholder="Jane">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label fw-bold">Last Name</label>
+                            <input type="text" class="form-control bg-light" id="lastName" placeholder="Smith">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-bold">Email Address</label>
+                        <input type="email" class="form-control bg-light" id="email" placeholder="jane.smith@example.com">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="subject" class="form-label fw-bold">Subject</label>
+                        <input type="text" class="form-control bg-light" id="subject" placeholder="How can we help?">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="message" class="form-label fw-bold">Message</label>
+                        <textarea class="form-control bg-light" id="message" rows="4" placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-lg rounded-pill px-5" onclick="alert('Message sent! (Demo)')">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
