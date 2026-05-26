@@ -1,19 +1,52 @@
 {% extends 'portal/base.html' %}
 
 {% block content %}
-<div class="row align-items-center py-4">
-    <div class="col-lg-6">
-        <h2 class="display-5 fw-bold text-primary mb-3">About EduPortal</h2>
-        <p class="lead text-muted">We are a leading educational platform dedicated to connecting students, parents, and educators in a seamless digital environment.</p>
-        <p>Founded with the belief that technology can simplify school management, we provide tools for fee tracking, event scheduling, and real-time communication.</p>
-        <ul class="list-unstyled mt-4">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Trusted by over 500 schools worldwide.</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Secure, fast, and reliable infrastructure.</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Dedicated 24/7 customer support.</li>
-        </ul>
+<div class="text-center mb-5">
+    <i class="bi bi-moon-stars-fill mb-3" style="font-size: 3rem; color: #c9a84c;"></i>
+    <h2 class="fw-bold" style="color: #1a5c2a;">About Al Madina School</h2>
+    <p class="text-muted">Dedicated to Islamic education and community excellence</p>
+</div>
+
+<div class="row g-5 align-items-start">
+    <div class="col-lg-7">
+        <h4 class="fw-bold mb-3" style="color: #2e7d46;">Who We Are</h4>
+        <p class="text-muted" style="line-height: 1.9;">
+            Al Madina School is an Islamic educational institution committed to providing students with a holistic education
+            rooted in the teachings of the Quran and the Sunnah of the Prophet Muhammad (peace be upon him).
+            We believe that knowledge is a trust from Allah, and we take that responsibility seriously.
+        </p>
+        <p class="text-muted" style="line-height: 1.9;">
+            Founded with the vision of serving our community, we strive to nurture the minds, hearts, and character
+            of every student who walks through our doors. Our dedicated teachers work tirelessly to ensure every
+            child reaches their full potential — academically, spiritually, and morally.
+        </p>
+
+        <div class="p-4 rounded-3 mt-4" style="background-color: #e8f5ec; border-left: 5px solid #2e7d46;">
+            <h5 class="fw-bold mb-3" style="color: #1a5c2a;">Our Core Values</h5>
+            <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #2e7d46;"></i> Taqwa (God-consciousness) in all affairs</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #2e7d46;"></i> Excellence in Quranic and Islamic studies</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #2e7d46;"></i> Respect for students, parents, and educators</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #2e7d46;"></i> Community service and brotherhood/sisterhood</li>
+                <li class="mb-0"><i class="bi bi-check-circle-fill me-2" style="color: #2e7d46;"></i> Continuous learning and self-improvement</li>
+            </ul>
+        </div>
     </div>
-    <div class="col-lg-6 text-center mt-4 mt-lg-0">
-        <i class="bi bi-building text-secondary" style="font-size: 15rem; opacity: 0.8;"></i>
+
+    <div class="col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-body p-4 text-center" style="background: linear-gradient(135deg, #1a5c2a, #2e7d46);">
+                <i class="bi bi-book-fill text-white mb-3" style="font-size: 4rem; opacity: 0.8;"></i>
+                <h4 class="text-white fw-bold">Our Programs</h4>
+                <hr style="border-color: rgba(255,255,255,0.3);">
+                <ul class="list-unstyled text-start text-white mb-0">
+                    <li class="mb-3"><i class="bi bi-dot me-1" style="color: #c9a84c;"></i><strong>Quran Memorization (Hifz)</strong><br><small class="opacity-75 ms-3">Full-time Quran memorization program</small></li>
+                    <li class="mb-3"><i class="bi bi-dot me-1" style="color: #c9a84c;"></i><strong>Tajweed Classes</strong><br><small class="opacity-75 ms-3">Proper Quranic recitation rules</small></li>
+                    <li class="mb-3"><i class="bi bi-dot me-1" style="color: #c9a84c;"></i><strong>Islamic Studies</strong><br><small class="opacity-75 ms-3">Fiqh, Hadith, Seerah, and Aqeedah</small></li>
+                    <li class="mb-0"><i class="bi bi-dot me-1" style="color: #c9a84c;"></i><strong>Arabic Language</strong><br><small class="opacity-75 ms-3">Reading, writing, and conversation</small></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

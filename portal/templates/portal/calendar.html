@@ -1,0 +1,65 @@
+{% extends 'portal/base.html' %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <i class="bi bi-calendar3 mb-3" style="font-size: 3rem; color: #c9a84c;"></i>
+    <h2 class="fw-bold" style="color: #1a5c2a;">School Calendar</h2>
+    <p class="text-muted">Important dates and upcoming events at Al Madina School</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-9">
+
+        <h5 class="fw-bold mb-3" style="color: #2e7d46;"><i class="bi bi-calendar-event me-2"></i>Upcoming Events</h5>
+
+        <div class="table-responsive shadow-sm rounded-3 mb-5">
+            <table class="table table-hover align-middle mb-0">
+                <thead style="background-color: #1a5c2a; color: #fff;">
+                    <tr>
+                        <th class="py-3 ps-4">Date</th>
+                        <th class="py-3">Event</th>
+                        <th class="py-3">Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ps-4 text-muted">June 15, 2026</td>
+                        <td class="fw-bold">End of Year Ceremony</td>
+                        <td><span class="badge rounded-pill" style="background-color: #2e7d46;">School Event</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4 text-muted">June 20, 2026</td>
+                        <td class="fw-bold">Last Day of Classes</td>
+                        <td><span class="badge rounded-pill bg-secondary">Academic</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4 text-muted">July 1 – Aug 31, 2026</td>
+                        <td class="fw-bold">Summer Break</td>
+                        <td><span class="badge rounded-pill bg-warning text-dark">Break</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4 text-muted">September 1, 2026</td>
+                        <td class="fw-bold">First Day of New Academic Year</td>
+                        <td><span class="badge rounded-pill bg-secondary">Academic</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4 text-muted">September 10, 2026</td>
+                        <td class="fw-bold">Parent Orientation Evening</td>
+                        <td><span class="badge rounded-pill" style="background-color: #2e7d46;">School Event</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4 text-muted">October 2026</td>
+                        <td class="fw-bold">Quran Competition</td>
+                        <td><span class="badge rounded-pill" style="background-color: #c9a84c;">Islamic</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="p-4 rounded-3 text-center" style="background-color: #e8f5ec; border: 1px solid #c8e6c9;">
+            <i class="bi bi-info-circle me-2" style="color: #2e7d46;"></i>
+            <span class="text-muted small">Dates are subject to change. Please check <a href="{% url 'announcements' %}" style="color: #2e7d46;">Announcements</a> for the latest updates or <a href="{% url 'contact' %}" style="color: #2e7d46;">contact us</a> directly.</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

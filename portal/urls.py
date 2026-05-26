@@ -8,4 +8,7 @@ urlpatterns = [
     path('donate/', views.donate, name='donate'),
     path('contact/', views.contact, name='contact'),
     path('payment/', views.payment_portal, name='payment'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('announcements/', views.announcements, name='announcements'),
+    path('calendar/', views.school_calendar, name='school_calendar'),
 ]

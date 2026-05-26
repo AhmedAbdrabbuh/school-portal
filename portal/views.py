@@ -21,6 +21,15 @@ def donate(request):
 def contact(request):
     return render(request, 'portal/contact.html')
 
+def gallery(request):
+    return render(request, 'portal/gallery.html')
+
+def announcements(request):
+    return render(request, 'portal/announcements.html')
+
+def school_calendar(request):
+    return render(request, 'portal/calendar.html')
+
 @login_required
 def payment_portal(request):
     if request.method == 'POST':

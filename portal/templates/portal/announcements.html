@@ -1,0 +1,63 @@
+{% extends 'portal/base.html' %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <i class="bi bi-megaphone-fill mb-3" style="font-size: 3rem; color: #c9a84c;"></i>
+    <h2 class="fw-bold" style="color: #1a5c2a;">Announcements</h2>
+    <p class="text-muted">Stay up to date with the latest news and updates from Al Madina School</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-9">
+
+        <div class="card border-0 shadow-sm mb-4 rounded-3">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0" style="color: #1a5c2a;">End of Year Ceremony</h5>
+                    <span class="badge rounded-pill" style="background-color: #2e7d46;">New</span>
+                </div>
+                <p class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> June 15, 2026</p>
+                <p class="text-muted mb-0">
+                    Alhamdulillah, we are pleased to announce our annual end-of-year ceremony celebrating
+                    the achievements of our students. Parents and families are warmly invited to attend.
+                    More details will be shared soon, in sha Allah.
+                </p>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mb-4 rounded-3">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0" style="color: #1a5c2a;">Ramadan Schedule Update</h5>
+                    <span class="badge rounded-pill bg-secondary">General</span>
+                </div>
+                <p class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> May 1, 2026</p>
+                <p class="text-muted mb-0">
+                    Please note that class timings will be adjusted during the blessed month of Ramadan.
+                    Updated schedules have been shared with all registered families. Please contact us
+                    if you have not received yours.
+                </p>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mb-4 rounded-3">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0" style="color: #1a5c2a;">New Hifz Program Enrollment Open</h5>
+                    <span class="badge rounded-pill bg-warning text-dark">Enrollment</span>
+                </div>
+                <p class="text-muted small mb-2"><i class="bi bi-calendar3 me-1"></i> April 10, 2026</p>
+                <p class="text-muted mb-0">
+                    Enrollment for our Quran Memorization (Hifz) program is now open for the new academic year.
+                    Spaces are limited. Please visit the Our Forms section or contact us directly to register
+                    your child, in sha Allah.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="text-muted fst-italic small">For urgent matters, please <a href="{% url 'contact' %}" style="color: #2e7d46;">contact us directly</a>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

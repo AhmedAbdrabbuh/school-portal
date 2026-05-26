@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "school-portal",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/aabdulhamed/Documents/GitHub/school-portal/manage.py", "runserver", "8000"],
+      "port": 8000
+    }
+  ]
+}
