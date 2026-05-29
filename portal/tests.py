@@ -24,6 +24,10 @@ class PortalTests(TestCase):
         response = self.client.get(reverse('donate'))
         self.assertEqual(response.status_code, 200)
 
+    def test_announcements_page_status_code(self):
+        response = self.client.get(reverse('announcements'))
+        self.assertEqual(response.status_code, 200)
+
     def test_contact_page_status_code(self):
         response = self.client.get(reverse('contact'))
         self.assertEqual(response.status_code, 200)
