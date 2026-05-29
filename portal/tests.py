@@ -28,6 +28,18 @@ class PortalTests(TestCase):
         response = self.client.get(reverse('contact'))
         self.assertEqual(response.status_code, 200)
 
+    def test_gallery_page_status_code(self):
+        response = self.client.get(reverse('gallery'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_announcements_page_status_code(self):
+        response = self.client.get(reverse('announcements'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_school_calendar_page_status_code(self):
+        response = self.client.get(reverse('school_calendar'))
+        self.assertEqual(response.status_code, 200)
+
     def test_payment_portal_redirects_unauthenticated(self):
         response = self.client.get(reverse('payment'))
         self.assertEqual(response.status_code, 302)
