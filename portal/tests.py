@@ -2,6 +2,7 @@ from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from django.urls import reverse
 from .models import Payment
+from decimal import Decimal
 
 class PortalTests(TestCase):
     def setUp(self):
@@ -46,3 +47,12 @@ class PortalTests(TestCase):
         self.assertEqual(response.status_code, 302) # Should redirect back to payment
         self.assertEqual(Payment.objects.count(), 1)
         self.assertEqual(Payment.objects.first().amount, 150.00)
+
+    def test_payment_str(self):
+        payment = Payment.objects.create(
+            user=self.user,
+            amount=Decimal('50.00'),
+            description="Book Fee"
+        )
+        expected_str = f"{self.user.username} - $50.00 - {payment.date.strftime('%Y-%m-%d')}"
+        self.assertEqual(str(payment), expected_str)
