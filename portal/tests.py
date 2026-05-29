@@ -2,6 +2,7 @@ from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from django.urls import reverse
 from .models import Payment
+from django.contrib.messages import get_messages
 
 class PortalTests(TestCase):
     def setUp(self):
@@ -46,3 +47,15 @@ class PortalTests(TestCase):
         self.assertEqual(response.status_code, 302) # Should redirect back to payment
         self.assertEqual(Payment.objects.count(), 1)
         self.assertEqual(Payment.objects.first().amount, 150.00)
+
+    def test_payment_missing_fields(self):
+        self.client.login(username='testuser', password='password123')
+        response = self.client.post(reverse('payment'), {
+            'amount': '',
+            'description': ''
+        })
+        self.assertEqual(response.status_code, 200) # Should NOT redirect
+        self.assertEqual(Payment.objects.count(), 0)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Please provide both amount and description.')
